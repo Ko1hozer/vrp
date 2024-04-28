@@ -1,0 +1,155 @@
+/* Сброс и основные стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+}
+
+/* Стили шапки сайта */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background-color: #ffffff; /* Белый фон */
+    border-bottom: 4px solid #226fa7; /* Фирменный синий цвет Газпром */
+}
+
+.logo {
+    height: 70px; /* Уменьшенный размер логотипа */
+}
+
+/* Стили для навигации */
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li a.active {
+    color: #e30613; /* Цвет активной ссылки */
+}
+
+nav ul li {
+    padding: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #005a9c; /* Фирменный синий цвет */
+    font-weight: bold;
+    transition: color 0.2s ease-in-out;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    color: #e30613; /* Фирменный красный цвет при наведении */
+}
+
+/* Стили для основного контента */
+main {
+    min-height: calc(100% - 140px); /* Вычитаем высоту шапки и подвала */
+    padding: 2rem;
+    background-color: #f0f0f0; /* Светло-серый фон для контента */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирование дочерних элементов */
+}
+
+/* Стили для таблицы */
+.table-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 70%; /* Указываем ширину таблицы */
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+th, td {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #004a77; /* Темно-синий цвет заголовка таблицы */
+    color: white;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #f0f0f0;
+}
+
+tbody tr:hover {
+    background-color: #e7e7e7;
+}
+
+/* Стили для подвала */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #005a9c; /* Пример цвета фона */
+    color: white; /* Цвет текста */
+    text-align: center;
+    padding: 10px 0;
+}
+
+footer p {
+    display: inline; /* Инлайновое отображение для поддержания текста в одной строке */
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .header-container, nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        padding: 0.5rem 0;
+    }
+
+    .table-container, table {
+        width: 100%; /* Таблица будет занимать 100% ширины на мобильных устройствах */
+    }
+}
+
+.total-consumption-container {
+    display: flex;
+    justify-content: flex-end; /* Выравнивание блока с итогами вправо */
+    margin-bottom: 20px; /* Отступ снизу для разделения блоков */
+}
+
+.total-consumption {
+    width: 50%; /* Задаём ширину блока с итогами */
+    margin-left: 20px; /* Отступ слева для создания пространства между таблицами */
+}
+
+.total-consumption table {
+    width: 100%; /* Ширина таблицы */
+    border-collapse: collapse; /* Убираем двойные границы */
+    margin-top: 30px; /* Отступ сверху для выравнивания с заголовком */
+    background: #f7f7f7; /* Светлый фон для выделения */
+}
+
+.total-consumption th,
+.total-consumption td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+/* Скрываем модальное окно */
+.hidden-modal {
+    display: none;
+}
